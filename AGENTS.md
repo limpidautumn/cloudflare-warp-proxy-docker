@@ -13,3 +13,11 @@
 面对依赖 https://github.com/go-gost/gost，维护一个 {version,arch,arch-variant} -> Release URL 的映射。
 
 使用 shfmt 格式化。
+
+## scripts/apt-mirror.sh
+
+维护一个脚本，用于将 Debian 默认 apt 源替换成用户指定的镜像源。
+
+若指定的镜像源为空，则保留默认源。
+
+若指定 HTTPS 源，一并处理首次引导的 CA 问题。
