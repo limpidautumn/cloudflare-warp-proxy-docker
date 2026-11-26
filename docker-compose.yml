@@ -1,0 +1,11 @@
+services:
+  warp:
+    build: .
+    image: warp-proxy:latest
+    container_name: warp-proxy
+    restart: unless-stopped
+    init: true
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "${WARP_PORT:-1080}:1080"
